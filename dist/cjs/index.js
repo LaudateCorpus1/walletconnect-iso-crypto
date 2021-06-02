@@ -9,6 +9,7 @@ import BlocksoftCryptoLog from '@crypto/common/BlocksoftCryptoLog'
 
 function generateKey(length) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        BlocksoftCryptoLog.log('@walletconnect/iso-crypto generateKey start')
         const _length = (length || 256) / 8;
         const bytes = Buffer.from(yield require('crypto').randomBytes(_length), 'base64');
         const result = utils_1.convertBufferToArrayBuffer(encUtils.arrayToBuffer(bytes));
