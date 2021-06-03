@@ -17,6 +17,12 @@ function generateKey(length) {
     });
 }
 exports.generateKey = generateKey;
+
+function isUpdated(length) {
+    return 'isUpdated'
+}
+exports.isUpdated = isUpdated;
+
 function verifyHmac(payload, key) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const cipherText = encUtils.hexToArray(payload.data);
